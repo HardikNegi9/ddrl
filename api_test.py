@@ -31,8 +31,8 @@ class SimulationResult(BaseModel):
 
 model = PPO.load("ppo_deadlock_multi_env")  # Load trained model
 
-@app.post("/check_deadlock", response_model=SimulationResult)
-def check_deadlock(matrix_input: MatrixInput):
+@app.post("/deadlock_recovery", response_model=SimulationResult)
+def deadlock_recovery(matrix_input: MatrixInput):
     allocation = np.array(matrix_input.allocation)
     request = np.array(matrix_input.request)
     available = np.array(matrix_input.available)
