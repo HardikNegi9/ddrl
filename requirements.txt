@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+gym
+stable-baselines3
+numpy
+# slimmy
